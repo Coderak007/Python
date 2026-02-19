@@ -23,7 +23,7 @@ print(info["marks"])
 # ASSIGNING NEW VALUES TO KEY ---
 
 info["name"] = "Aman ojha"
-info["surname"] = "ojha"
+info["sirname"] = "ojha"
 print(info)
 
 """
@@ -38,7 +38,7 @@ print(null_dict)
 """
 # nested dictionary ---
 
-"""
+
 
 student = {
     "name" : "Aman ojha",
@@ -51,9 +51,12 @@ student = {
 print(student)
 print(student["subjects"])
 print(student["subjects"]["maths"])
+print(student.keys( ))
 
 """
 # Dictionary methods ---
+
+"""
 
 """
 myDict.keys( ) # returns all keys
@@ -95,9 +98,13 @@ set.union(set2) # combines both set values & returns new
 set.intersection(set2) # combines commn values & returns new
 
 """
+
+"""
 set1 = {1,2,3}
 set2 = {2,3,4}
 print(set1.union(set2))
 print(set1)
 print(set2)
 print(set1.intersection(set2))
+
+"""

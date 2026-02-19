@@ -39,6 +39,7 @@ while i <= 10000 :
 
 """
 
+i = 1
 while i <= 5:
     print( i)
     i += 1
@@ -100,13 +101,14 @@ while i <= 10:
 
 """
 
-n = int(input( "enter number "))
+# n = int(input( "enter number "))
 i = 1
 while i <= 10:
-    print(n * i)
+    print(12 * i)
     i += 1
 
 """
+
 # print elements of the following list using a loop ---
 
 """
@@ -235,20 +237,25 @@ for el in tup:
     print(el)
 
 """
-"""
+
 # 4
+
+"""
 
 str = "men are brave"
 
 for char in str:
     if(char == 'b'):
         print("b found")
+        #continue
         break
     print(char)
 else:
     print("END")
 
-"""
+"""    
+
+
                                            # practice questions -
 
 # print the elements of the following list using a loop .
@@ -300,15 +307,18 @@ for el in range(1 , 5 , 2):
 
 # Wap to print all numbers which are divisible by 3 and 5 upto first fifty numbers by loop - 
 
+
 """
 
 i = 1
 while i <= 50:
     if i % 3 == 0 and i % 5 == 0:
-        print(i, "is divisible by both 3 and 5")
+        print(i,"is divisible by both 3 and 5 ")
     i += 1
 
-"""    
+"""
+     
+  
 # Make an AP ( first number , common difference and number of terms take all from user ) - 
 
 """
@@ -339,7 +349,11 @@ while i <= n:
     print(b)
     i += 1
 
+
 """
+
+
+
 for i in range(0 , 4):
     for j in range(0 , 4):
         print("*",end=" ")
