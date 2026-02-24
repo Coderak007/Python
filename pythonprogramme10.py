@@ -127,6 +127,8 @@ print(s1.get_marks())
 
                                        # Practice
 
+"""
+
  # Create student class that takes name & marks of 3 subjects as arguments in constructor. then create a method to print the average.
 
 class Student:
@@ -143,6 +145,77 @@ class Student:
 s1 = Student("Aman ojha ", [99,99,98])
 s1.get_avg()       
 
+"""
 
 
-                                          
+                                                # Static Methods
+# Methods that don't use the self parameter (work at class level)
+"""
+
+class Student:
+    @staticmethod # decorator
+    def college():
+        print("ABC college")
+
+
+"""
+# Decorators allow us to wrap another function in order to extend the behaviour of the wrapped function , without permanently modifying it 
+
+# ABSTRACTION - Hiding the implementation details of a class and only showing the essential feature to the user.
+# ENCAPSULATION - Wrapping data and functions into a single unit (object).
+ 
+# Abstraction ---
+
+"""
+
+class Car:
+    def __init__(self):
+        self.acc = False
+        self.brk = False
+        self.clutch = False
+
+    def start(self):
+        self.clutch = True
+        self.acc = True
+        print("car started...")
+
+car1 = Car()
+car1.start()        
+
+"""
+
+# Practice --- Create Account class 2 attributes - balance & account no.
+# Create methods for debit , credit and printing the balance
+
+"""
+
+class Account:
+    def __init__(self, bal, acc):
+        self.balance = bal
+        self.account_no = acc
+
+    #debit method
+    def debit(self, amount):
+        self.balance -= amount
+        print("Rs.", amount, "was debited")
+        print("Total balance = ", self.get_balance())
+
+
+    def credit(self, amount):
+        self.balance += amount
+        print("Rs.", amount, "was credited")
+        print("Total balance = ", self.get_balance())
+
+    def get_balance(self):
+        return self.balance
+               
+
+acc1 = Account(10000, 12345)
+acc1.debit(1000)
+acc1.credit(500000)
+acc1.get_balance
+print(acc1.balance) 
+print(acc1.account_no)
+      
+        
+"""                                         
