@@ -95,6 +95,7 @@ car1.start()
 """
 # Multiple Inheritance ---
 
+"""
 class A:
     varA = "hi , i am class A"
 
@@ -109,3 +110,78 @@ c1 = C()
 print(c1.varC)
 print(c1.varB)
 print(c1.varA)  
+
+"""
+
+"""
+
+# Super method - super() method is used to access methods of parent class .
+class Car:
+    def __init__(self, type):
+        self.type = type
+    @staticmethod
+    def start():
+        print("car started ...")
+
+    @staticmethod
+    def stop():
+        print("car stoped.")
+
+class Toyota(Car):
+    def __init__(self, name, type):
+        super().__init__(type)
+        self.name = name
+
+car1 = Toyota("Prius", "electric")
+print(car1.type)
+
+"""
+# Class Method ---
+"""
+A class method is bound to the class & receives the class as an implicit first argument .
+NOTE - static method can't access or modify class state & generally for utility.
+
+  class Student:
+      @classmethod # decorator
+      def college(cls):
+            pass
+
+"""
+
+"""
+
+class Person:
+    name = "anonymous"
+
+    def changeName(self, name):
+        self.__class__.name = "Aman"
+
+    @classmethod
+    def changeName(cls, name):
+        cls.name = name
+
+p1 = Person()
+p1.changeName("Aman Ojha")
+print(p1.name)
+print(Person.name)            
+
+"""
+# Property --- We use @property decorator on any method in the class to use the method as a property.
+# eg ---
+class Student:
+    def __init__(self, phy, chem, math):
+        self.phy = phy
+        self.chem = chem
+        self.math = math
+
+    @property
+    def percentage(self):
+        return str((self.phy + self.chem + self.math) / 3) + "%"
+
+stu1 = Student(98, 97 , 99)
+print(stu1.percentage)
+
+stu1.phy = 100
+print(stu1.percentage)
+
+
