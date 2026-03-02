@@ -244,6 +244,7 @@ print(c1.perimeter())
 
 # Define a Employee class with attribute role, department & salary . this class also showDetails() method. Create an Engineer class that inherits properties from employee & has additional attributes : name & age
 
+"""
 
 class Employee:
     def __init__(self, role, dept, salary):
@@ -265,3 +266,22 @@ class Engineer(Employee):
 
 engg1 = Engineer("Aman" , 22)
 engg1.showDetails()           
+
+"""
+
+# Create a class Order which stores item & its price. Use Dunder function__gt__() to convey that :
+# order1 > order2 if price of order1 > price of order2
+
+class Order:
+    def __init__(self, item, price):
+        self.item = item
+        self.price = price
+
+    def __gt__(self, odr2):
+        return self.price > odr2.price
+
+
+odr1 = Order("chips", 40)
+odr2 = Order("tea", 30) 
+
+print(odr1 > odr2)
