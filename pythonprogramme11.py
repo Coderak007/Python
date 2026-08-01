@@ -272,6 +272,8 @@ engg1.showDetails()
 # Create a class Order which stores item & its price. Use Dunder function__gt__() to convey that :
 # order1 > order2 if price of order1 > price of order2
 
+"""
+
 class Order:
     def __init__(self, item, price):
         self.item = item
@@ -284,4 +286,6 @@ class Order:
 odr1 = Order("chips", 40)
 odr2 = Order("tea", 30) 
 
-print(odr1 > odr2)
+print(odr1 > odr2
+
+"""
