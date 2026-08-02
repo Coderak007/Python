@@ -46,7 +46,6 @@ class SinglyLinkedList:
 
         if t1.data == value:
             prev.next = None            
-            
         
     def printLL(self):
         t1 = self.head
