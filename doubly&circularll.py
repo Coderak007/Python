@@ -31,11 +31,45 @@ class DoublyLinkedList:
         self.head.prev = temp
         self.head = temp    
 
+    def insertAtMid(self, value, x):
+        temp = Node(value)
+        t1 = self.head
+        while t1 != None:
+            if t1.value == x:
+                break
+            t1 = t1.next
+        if t1 == None:
+            print("Node not found")
+            return
+        temp.prev = t1
+        temp.next = t1.next
+        if t1.next != None:
+            t1.next.prev = temp
+        t1.next = temp
+
+
+
     def printDLL(self):
         t1 = self.head
         while t1 != None:
             print(t1.value , end = " <--> ")
             t1 = t1.next
+
+    def deleteNode(self, x):
+        t1 = self.head
+        while t1 != None:
+            if t1.value == x:
+                break
+            t1 = t1.next
+        if t1 == None:
+            print("Node not found")
+            return
+        if t1.prev != None:
+            t1.prev.next = t1.next
+        else:
+            self.head = t1.next
+        if t1.next != None:
+            t1.next.prev = t1.prev
         
 
 obj = DoublyLinkedList()
@@ -44,5 +78,7 @@ obj.insertAtEnd(20)
 obj.insertAtEnd(30)
 obj.insertAtEnd(40)
 obj.insertAtStart(5)
+obj.insertAtMid(50, 20)
+obj.deleteNode(30)
 obj.printDLL()
 
